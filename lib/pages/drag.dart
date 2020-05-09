@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PhysicsCardDragDemo extends StatelessWidget {
+class DragDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

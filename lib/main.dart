@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './pages/home.dart';
 import './pages/circle.dart';
 import './pages/physicsSimulation.dart';
+import './pages/drag.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (BuildContext context) => MyHomePage(title: 'List'),
         '/circle': (BuildContext context) => CancasCircle(title: 'circle'),
+        '/drag': (BuildContext context) => DragDemo(),
         '/physicsSimulation': (BuildContext context) => PhysicsCardDragDemo(),
       },
     );

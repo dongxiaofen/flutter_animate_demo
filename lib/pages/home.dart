@@ -13,6 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final list = [
     { 'title': 'Canvas Circle', 'router': '/circle' },
     { 'title': 'Physics Simulation', 'router': '/physicsSimulation' },
+    { 'title': 'Drag', 'router': '/drag' },
     
   ];
   @override
