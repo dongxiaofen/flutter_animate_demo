@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_canvas/pages/RunBoll1.dart';
 
 import './pages/home.dart';
 import './pages/circle.dart';
 import './pages/physicsSimulation.dart';
 import './pages/drag.dart';
+import './pages/runBoll1.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/circle': (BuildContext context) => CancasCircle(title: 'circle'),
         '/drag': (BuildContext context) => DragDemo(),
         '/physicsSimulation': (BuildContext context) => PhysicsCardDragDemo(),
+        '/runBoll1': (BuildContext context) => RunBall1(),
       },
     );
   }
