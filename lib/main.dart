@@ -10,7 +10,8 @@ import './pages/runBoll1.dart';
 import 'package:flutter_canvas/pages/error-catch.dart';
 
 // void main() => runApp(MyApp());
-main(List<String> args) {
+main() {
+  // STEP 1. Create catcher configuration.
   CatcherOptions debugOptions =
     CatcherOptions(SilentReportMode(), [
       ConsoleHandler(),
@@ -21,7 +22,7 @@ main(List<String> args) {
     ConsoleHandler(),
     HttpHandler(HttpRequestType.post, Uri.parse("https://www-pre.naoxuejia.com/api/errorReport")),
   ]);
-  
+  // STEP 2. Pass your root widget (MyApp) along with Catcher configuration:
   Catcher(MyApp(), debugConfig: debugOptions, releaseConfig: releaseOptions);
 }
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      // STEP 3. Add navigator key from Catcher. It will be used to navigate user to report page or to show dialog.
       navigatorKey: Catcher.navigatorKey,
       theme: ThemeData(
         primarySwatch: Colors.blue,
