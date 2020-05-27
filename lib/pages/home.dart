@@ -15,6 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
     { 'title': 'Physics Simulation', 'router': '/physicsSimulation' },
     { 'title': 'Drag', 'router': '/drag' },
     { 'title': 'RunBoll1', 'router': '/runBoll1' },
+    { 'title': 'ErrorCatch', 'router': '/errorCatch' },
     
   ];
   @override
@@ -25,11 +26,32 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView.builder(
         itemCount: list.length,
-        itemBuilder: (BuildContext context, int idx) => RaisedButton(
-          onPressed: () {
+        itemBuilder: (BuildContext context, int idx) => GestureDetector(
+          onTap: () {
             Navigator.pushNamed(context, list[idx]['router']);
           },
-          child: Text(list[idx]['title']),
+          child: Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 10
+            ),
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Color(0xffE8EAEF),
+                  width: 1,
+                  style: BorderStyle.solid,
+                )
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(list[idx]['title']),
+                Icon(Icons.keyboard_arrow_right)
+              ]
+            ),
+          ),
         )
       )
     );

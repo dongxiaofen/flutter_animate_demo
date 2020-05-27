@@ -11,10 +11,11 @@ class _RunBall1State extends State<RunBall1> with SingleTickerProviderStateMixin
   // Ball _ball;
   // Rect _area;
   Rect _area = Rect.fromLTRB(0+40.0,0+200.0,280+40.0,200+200.0);
-  Ball  _ball = Ball(color: Colors.blueAccent, r: 10,aY: 0.1, vX: 2, vY: -2,x: 40.0+140,y:200.0+100);
+  Ball  _ball = Ball(color: Colors.blueAccent, r: 10,aY: 0.1, vX: 2, vY: 2,x: 40.0+140,y:200.0+100);
 
   @override
   void initState() {
+    super.initState();
     // setState(() {
     //   _area = Rect.fromLTRB(0+40.0,0+200.0,280+40.0,200+200.0);
     //   _ball = Ball(color: Colors.blueAccent, r: 10,aY: 0.1, vX: 2, vY: -2,x: 40.0+140,y:200.0+100);
@@ -30,6 +31,7 @@ class _RunBall1State extends State<RunBall1> with SingleTickerProviderStateMixin
   @override
   void dispose() {
     controller.dispose(); // 资源释放
+    super.dispose();
   }
 
   //渲染方法，更新状态
