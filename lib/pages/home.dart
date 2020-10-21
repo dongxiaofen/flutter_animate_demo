@@ -16,7 +16,8 @@ class _MyHomePageState extends State<MyHomePage> {
     {'title': 'Drag', 'router': '/drag'},
     {'title': 'RunBoll1', 'router': '/runBoll1'},
     {'title': 'ClipPath', 'router': '/clipPath'},
-    {'title': 'VideoFloat', 'router': '/videoFloat'},
+    {'title': 'RouterChange', 'router': '/routerChange'},
+    // {'title': 'VideoFloat', 'router': '/videoFloat'},
     
     // {'title': 'ErrorCatch', 'router': '/errorCatch'},
   ];
